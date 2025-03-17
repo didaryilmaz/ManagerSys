@@ -21,7 +21,11 @@ namespace ManagerSystem
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Category>()
+        .HasMany(e => e.Product)
+        .WithOne(e => e.Category)
+        .HasForeignKey(e => e.CategoryId)
+        .HasPrincipalKey(e => e.Id);
         }
         public DbSet<ManagerSystem.Models.Category> Categories { get; set; }
         public DbSet<ManagerSystem.Models.Product> Products { get; set; }

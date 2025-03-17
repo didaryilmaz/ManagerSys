@@ -15,23 +15,15 @@ namespace ManagerSystem.Manager
             _context = context;
         }
 
-        public void Add(params Category[] entity)
+        public void Add(params Category[] entities)
         {
-            try
-            {
-                foreach (var category in entity)
+                foreach (var category in entities)
                 {
                     _context.Categories.Add(category);
-                    Console.WriteLine($"Kategori eklendi: {category.CategoryName}");
                 }
                 _context.SaveChanges();
-                Console.WriteLine("Veritabanına başarıyla kaydedildi.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Hata oluştu: {ex.Message}");
-            }
         }
+        
 
 
 
@@ -45,7 +37,7 @@ namespace ManagerSystem.Manager
                     categoryToUpdate.CategoryName = category.CategoryName;
                 }
             }
-            _context.SaveChanges();  // ✅ Değişiklikleri kaydet
+            _context.SaveChanges(); 
         }
 
         public void Delete(params Category[] entities)
@@ -58,7 +50,7 @@ namespace ManagerSystem.Manager
                     _context.Categories.Remove(categoryToDelete);
                 }
             }
-            _context.SaveChanges();  // ✅ Değişiklikleri kaydet
+            _context.SaveChanges();  
         }
 
         public List<Category> GetAll()
