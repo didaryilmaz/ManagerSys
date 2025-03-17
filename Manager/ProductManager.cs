@@ -9,18 +9,43 @@ namespace ManagerSystem.Manager
 {
     public class ProductManager : IGenericManager<Product>
     {
+        SystemContext context = new SystemContext();
         public void Add(params Product[] entity)
         {
-            throw new NotImplementedException();
+                foreach (var product in entity)
+                {
+                    context.Products.Add(product);
+                }
+                context.SaveChanges();
+           
         }
-        public void Update(params Product[] entity)
+        public void Update(params Product[] entities)
         {
-            throw new NotImplementedException();
+                foreach (var entity in entities)
+                {
+                    var productToUpdate = context.Products.SingleOrDefault(p => p.ProductId == entity.ProductId);
+                    if (productToUpdate != null)
+                    {
+                        productToUpdate.ProductName = entity.ProductName;
+                        productToUpdate.ProductPrice = entity.ProductPrice;
+                        productToUpdate.CategoryId = entity.CategoryId;
+                    }
+                }
+                context.SaveChanges();
         }
 
-        public void Delete(params Product[] entity)
+
+        public void Delete(params Product[] entities)
         {
-            throw new NotImplementedException();
+                foreach (var entity in entities)
+                {
+                    var productToDelete = context.Products.SingleOrDefault(p => p.ProductId == entity.ProductId);
+                    if (productToDelete != null)
+                    {
+                        context.Products.Remove(productToDelete);
+                    }
+                }
+                context.SaveChanges();
         }
 
         public string Display(Product entity)
@@ -30,12 +55,13 @@ namespace ManagerSystem.Manager
 
         public List<Product> GetAll()
         {
-            throw new NotImplementedException();
+                return context.Products.ToList();
         }
 
         public Product GetById(int id)
         {
-            throw new NotImplementedException();
+                return context.Products.SingleOrDefault(p => p.ProductId == id);
         }
+
     }
 }

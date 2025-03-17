@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/didaryilmaz/Documents/ManagerSystem/ManagerSystem.csproj": {}
+    "/Users/didaryilmaz/Documents/GitHub/ManagerSys/ManagerSystem.csproj": {}
   },
   "projects": {
-    "/Users/didaryilmaz/Documents/ManagerSystem/ManagerSystem.csproj": {
+    "/Users/didaryilmaz/Documents/GitHub/ManagerSys/ManagerSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/didaryilmaz/Documents/ManagerSystem/ManagerSystem.csproj",
+        "projectUniqueName": "/Users/didaryilmaz/Documents/GitHub/ManagerSys/ManagerSystem.csproj",
         "projectName": "ManagerSystem",
-        "projectPath": "/Users/didaryilmaz/Documents/ManagerSystem/ManagerSystem.csproj",
+        "projectPath": "/Users/didaryilmaz/Documents/GitHub/ManagerSys/ManagerSystem.csproj",
         "packagesPath": "/Users/didaryilmaz/.nuget/packages/",
-        "outputPath": "/Users/didaryilmaz/Documents/ManagerSystem/obj/",
+        "outputPath": "/Users/didaryilmaz/Documents/GitHub/ManagerSys/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/didaryilmaz/.nuget/NuGet/NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Bt8vCmQ+wzI=",
+  "dgSpecHash": "rCh2mngmuic=",
   "success": true,
-  "projectFilePath": "/Users/didaryilmaz/Documents/ManagerSystem/ManagerSystem.csproj",
+  "projectFilePath": "/Users/didaryilmaz/Documents/GitHub/ManagerSys/ManagerSystem.csproj",
   "expectedPackageFiles": [
     "/Users/didaryilmaz/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/didaryilmaz/.nuget/packages/microsoft.bcl.asyncinterfaces/7.0.0/microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
